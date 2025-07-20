@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #121212;
+    color: white;
+  }
+  
+  header {
+    background-color: #000000;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #cb6969;
+  }
+  
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #ff7f00;
+  }
+  
+  .social-links a {
+    color: #cb6969;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .social-links a:hover {
+    color: #e94b8c;
+  }
+  
+  nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #ff7f00;
+  }
+  
+  .irene-name {
+    color: #ff69b4; /* pink */
+  }
+  
+  .seulgi-name {
+    color: #ffd700; /* yellow */
+  }
+  
+  
+  .hero {
+    background: linear-gradient(to right, #000000, #222222);
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+  }
+  .duo-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  
+  .member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .amp {
+    font-size: 2.5rem;
+    color: white;
+  }
+  
+  
+  .name-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    object-fit: cover;
+    border: 2px solid white;
+  }
+  
+  .overlay {
+    padding: 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .intro {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .colors {
+    margin-top: 2rem;
+  }
+  
+  .dot {
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+  
+  .red { background-color: red; }
+  .black { background-color: black; }
+  .white { background-color: white; }
+  .pink { background-color: #e94b8c; }
+  .yellow { background-color: #ffcc00; }
+  
+  .pink {
+    color: #e94b8c;
+  }
+  
+  .yellow {
+    color: #ffcc00;
+  }
+  .albums-page {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .album {
+    background-color: #1e1e1e;
+    border-left: 5px solid #ff7f00; /* changed to orange */
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+  }
+  
+  .album.irene {
+    border-color: #e94b8c;
+  }
+  
+  .album.seulgi {
+    border-color: #ffcc00;
+  }
+  
+  .album h2 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .album.monster {
+  border-left: 5px solid #ff7f00; /* Orange for Monster */
+}
+
+.album.naughty {
+  background-color: #222222;
+  border-left: 5px solid #ff7f00; /* same orange border */
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.album.naughty p {
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+  
+  .album ul {
+    list-style: square;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .album-cover {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin: 1rem 0;
+  }
+  
