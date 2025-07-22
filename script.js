@@ -29,3 +29,11 @@ function addAudioHoverEffect(imageId, audioId) {
 addAudioHoverEffect('likeAFlower', 'audio-likeAFlower');
 addAudioHoverEffect('twentyEightReasons', 'audio-twentyEightReasons');
 addAudioHoverEffect('babyNotBaby', 'audio-babyNotBaby');
+addAudioHoverEffect('monster', 'audio-monster');
+addAudioHoverEffect('tilt', 'audio-tilt');
+
+function toggleMenu() {
+  const nav = document.querySelector('.nav-links');
+  nav.classList.toggle('active');
+}
+

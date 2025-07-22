@@ -5,14 +5,77 @@ body {
     color: white;
   }
   
-  header {
-    background-color: #000000;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #cb6969;
+/* Header styling */
+header {
+  background-color: #000000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #cb6969;
+  position: relative;
+  z-index: 1001;
+}
+
+.logo a {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #ff7f00;
+  text-decoration: none;
+}
+
+/* Desktop nav */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  transition: max-height 0.4s ease-out;
+  overflow: hidden;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  border-radius: 5px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #121212;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
   }
+
+  .nav-links a {
+    padding: 1rem 0;
+    display: block;
+  }
+
+  .nav-links.active {
+    max-height: 500px; /* Adjust if you add more links */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
   
   .logo {
     font-family: 'Playfair Display', serif;
@@ -28,9 +91,30 @@ body {
   }
   
   .social-links a:hover {
-    color: #e94b8c;
+    color: #fcb9aa;
   }
   
+.logos {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.logo-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.logo-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
   nav a {
     color: white;
     margin-left: 20px;
@@ -82,12 +166,30 @@ body {
   
   
   .name-icon {
-    width: 100px;
-    height: 100px;
-    border-radius: 10%;
-    object-fit: cover;
-    border: 2px solid white;
-  }
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for all */
+.name-icon:hover {
+  transform: scale(1.15);
+}
+
+/* Irene-specific hover */
+.irene-img:hover {
+  border: 2px solid #e94b8c; /* Pink border */
+  box-shadow: 0 0 10px #e94b8c;
+}
+
+/* Seulgi-specific hover */
+.seulgi-img:hover {
+  border: 2px solid #f5d142; /* Yellow border */
+  box-shadow: 0 0 10px #f5d142;
+}
+
+
   
   .overlay {
     padding: 2rem;
@@ -195,3 +297,106 @@ body {
     margin: 1rem 0;
   }
   
+  /* balance tour */
+ .tour-poster {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 1rem;
+}
+
+.tour-poster-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: zoom-in;
+}
+
+.tour-poster-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.poster-caption {
+  font-style: italic;
+  color: #ccc;
+  margin-top: 1rem;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #ff7f00;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #e66500;
+}
+
+/* ========== GALLERY PAGE ONLY ========== */
+.gallery-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery-section {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.gallery-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Playfair Display', serif;
+  color: #ff7f00;
+}
+
+.gallery-subtext {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.gallery-item {
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.caption {
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  color: #eee;
+  background-color: #121212;
+  border-top: 1px solid #333;
+}
